@@ -12,7 +12,20 @@
 */
 
 function swap(x, y){
-    // Task 1: Add code here
+    // Check if x and y are numeric
+    if (isNaN(x) || isNaN(y)) {
+        console.log(-1);
+        return;
+    }
+
+    // Swap values using a temporary variable
+    let temp = x;
+    x = y;
+    y = temp;
+
+    console.log(`${x}, ${y}`);
 }
 
-// Task 2: Add code here
+// Print output
+swap("Apple", 10);
+swap(9, 17);
